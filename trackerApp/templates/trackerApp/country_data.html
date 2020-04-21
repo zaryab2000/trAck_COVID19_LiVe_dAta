@@ -51,6 +51,22 @@
 {% block content %}
 <div>
 	<div class="container" style="text-align: center;">
+		<!-- SELECT BOX -->
+		<form method="POST">
+			{%csrf_token%}
+		
+		  <div class="form-group d-flex justify-content-center">
+		    <label for="exampleFormControlSelect1">SELECT A COUNTRY NAME</label>
+		    <select class="form-control" id="exampleFormControlSelect1 " name="country_name">
+		    <option>SELECT A COUNTRY </option>
+		      {% for name in names %}
+		      <option >{{name}}</option>
+		      {% endfor %}
+		    </select>
+		  <button type="submit" class="btn btn-outline-primary">Get Updates</button>
+		  </div>
+	</form>
+
 
 
 		<!-- OVERALL DATA -->
