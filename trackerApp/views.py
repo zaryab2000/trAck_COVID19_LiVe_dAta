@@ -73,4 +73,54 @@ def getCountryData(request):
 	return render(request, 'trackerApp/country_data.html',context)
 
 def top(request):
-	pass
+	countries=[]
+	vals=[]
+	init_list={}
+
+	# cont_list = getCountries()
+
+	# for name in cont_list:
+	# 	country_url = f'https://covid19.mathdro.id/api/countries/{name}'
+	# 	cont_data = requests.get(country_url)
+	# 	json=cont_data.json()
+
+	# 	try:
+	# 		conf = json['confirmed']['value']
+	# 	except KeyError:
+	# 		conf = 0
+
+	# 	init_list[name]=conf
+	# new_data = {k: v for k, v in sorted(init_list.items(), key=lambda item: item[1], reverse=True)[:10]}
+	new_data= {'US': 834858, 'Spain': 208389, 'Italy': 187327, 'France': 159315, 'Germany': 149401, 'United Kingdom': 134637, 'Turkey': 98674, 'Iran': 85996, 'China': 83868, 'Russia': 57999}
+
+	for key,value in new_data.items():
+		countries.append(key)
+		vals.append(value)
+	context={
+		'countries':countries,
+		'value':vals
+	}
+
+	return render(request, 'trackerApp/top10.html',context)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
