@@ -5,6 +5,24 @@ from django.shortcuts import render
 def index(request):
 	return render(request, 'trackerApp/base.html')
 
+def getCountries():
+	country_url = f'https://covid19.mathdro.id/api/countries'
+	countries_list=[]
+
+	country_data = requests.get(country_url)
+	con_json=country_data.json()
+
+	countries=con_json['countries']
+	# confirmed = json['confirmed']['value']
+	# recover  =json['recovered']['value']
+	# deaths = json['deaths']['value']
+
+	for country in countries:
+		name = country['name']
+		countries_list.append(name)
+
+	return countries_list
+
 def data(request):
 	url = f'https://covid19.mathdro.id/api/'
 	country_url = f'https://covid19.mathdro.id/api/countries'
@@ -37,20 +55,7 @@ def data(request):
 
 	
 def getCountryData(request):
-	country_url = f'https://covid19.mathdro.id/api/countries'
-	countries_list=[]
-
-	country_data = requests.get(country_url)
-	con_json=country_data.json()
-
-	countries=con_json['countries']
-	# confirmed = json['confirmed']['value']
-	# recover  =json['recovered']['value']
-	# deaths = json['deaths']['value']
-
-	for country in countries:
-		name = country['name']
-		countries_list.append(name)
+	countries_list=getCountries()
 
 	if request.method =='POST':
 		name = request.POST.get('country_name')
@@ -81,3 +86,6 @@ def getCountryData(request):
 	}
 
 	return render(request, 'trackerApp/country_data.html',context)
+
+def top(request):
+	pass

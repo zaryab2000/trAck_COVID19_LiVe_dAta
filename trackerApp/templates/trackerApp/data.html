@@ -51,13 +51,14 @@
 {% block content %}
 <div>
 	<div class="container" style="text-align: center;">
-
-
-		<!-- OVERALL DATA -->
-		<h1>COVID-19 DATA FROM ACROSS THE WORLD</h1>
-		<h3>CONFIRMED - {{confirmed}}</h3>
+		<div class="row d-flex justify-content-between">
+			<h3>CONFIRMED - {{confirmed}}</h3>
 		<h3>RECOVERED -{{recovered}}</h3>
 		<h3>DEATHS - {{deaths}}</h3>
+		</div>
+
+	<!-- 	<h1>COVID-19 DATA FROM ACROSS THE WORLD</h1> -->
+		
 	</div>
 
 	<div class="container" style="text-align: center;">
