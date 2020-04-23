@@ -1,0 +1,19 @@
+{% extends 'trackerApp/base_index.html' %}
+
+{% block scripts %}
+
+
+{% endblock scripts %}
+{% block content %}
+<div>
+	<div class="container" style="text-align: center;">
+			{% for heads in data %}
+			<h3>{{heads.0}}->{{heads.1}}</h3>
+			{% endfor %}
+	</div>
+
+</div>
+
+
+
+{% endblock %}
