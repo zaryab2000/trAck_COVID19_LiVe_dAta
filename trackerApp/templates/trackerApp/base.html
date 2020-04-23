@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-       <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+       <link rel="stylesheet" type="text/css" href="{% static 'trackerApp/main.css/' %}">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -14,9 +14,10 @@
     <title>COVID-19 TRACKER</title>
   </head>
   <body >
-      <nav class="navbar navbar-expand-lg navbar-dark navbar-inverse" style="background-color: #00CED1; font-size: 20px">
-          <div class="container-fluid">
-          <a class="navbar-brand" href="#" style=" font-size: 30px">BoB </a>
+
+ <nav class="navbar navbar-expand-lg navbar-dark navbar-inverse">
+          <div class="container-fluid">  
+          <a class="navbar-brand" href="#" style=" font-size: 30px">BoB </a></div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -51,32 +52,34 @@
     
  </div>
 </nav>
-   
-    <div class="jumbotron jumbotron-fluid" style="background:DarkTurquoise;">
-      <div class="container">
-        <h1 class="display-2">COVID-19 TRACKER</h1>
-        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-      </div>
-    </div>
-    <div class="container">
+
+<div >
+  <div class="container ">
+    <h2 class="text-center align-middle">COVID-19 TRACKER </h2>
+    <p class="text-justify text-center">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+  </div>
+</div>
+
+    <div class="container">  
       <div class="row d-flex justify-content-between">
         <div class="col-md-6 col-lg-4"> 
           <div class="card">
             <img class="card-img-top" src="{% static 'bl_linked.png' %}" alt="Card image cap">
+
             <div class="card-body">
-              <h3 class="card-title">Card title</h3>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h6 class="card-title">Card title</h6>
+              <p1 class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p1>
               <a href="#" class="btn btn-primary">READ POSTS</a>
             </div>
           </div>
         </div>
-
+  
         <div class="col-md-6 col-lg-4"> 
           <div class="card">
             <img class="card-img-top" src="#" alt="Card image cap">
             <div class="card-body">
-              <h3 class="card-title">Card title</h3>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h6 class="card-title">Card title</h6>
+              <p1 class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p1>
               <a href="#" class="btn btn-primary">LOGIN</a>
             </div>
           </div>
@@ -85,7 +88,17 @@
       </div>
     </div>
 </div>
-
+</div>
+<div class="buttons">
+  <h1>Simple hover effects with <code>box-shadow</code></h1>
+  <button class="fill">Fill In</button>
+  <button class="pulse">Pulse</button>
+  <button class="close">Close</button>
+  <button class="raise">Raise</button>
+  <button class="up">Fill Up</button>
+  <button class="slide">Slide</button>
+  <button class="offset">Offset</button>
+</div>
 <div class="row">
         <div class="col-md-8">
           {% if messages %}
@@ -102,7 +115,8 @@
       </div>
     </main> 
 <!-- Footer -->
-<footer class="page-footer font-small teal pt-4" style="background:DarkTurquoise;">
+<div class="bottom">
+<footer class="page-footer font-small teal pt-4" ">
 
   <!-- Footer Text -->
   <div class="container-fluid text-center text-md-left">
@@ -147,7 +161,7 @@
     <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
   </div>
   <!-- Copyright -->
-
+</div >
 </footer>
 <!-- Footer -->
     <!-- Optional JavaScript
