@@ -1,8 +1,10 @@
 #!/usr/bin/env python
 import os
 import sys
+from django_secrets.startup import check
 
 if __name__ == "__main__":
+    check()
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "covidTracker.settings")
     try:
         from django.core.management import execute_from_command_line
