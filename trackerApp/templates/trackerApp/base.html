@@ -17,7 +17,7 @@
   <div class="back">
     <nav class="navbar navbar-expand-lg navbar-dark navbar-inverse ">
       <div class="container-fluid">
-      <a class="navbar-brand" href="#" style=" font-size: 30px">COviD-19 TRaCker </a>
+      <a class="navbar-brand" href="{% url 'index' %}" style=" font-size: 30px">COviD-19 TRaCker </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -55,14 +55,14 @@
 <div >
   <div class="container ">
     <h2 class="text-center align-middle">COVID-19 TRACKER </h2>
-    <p class="text-justify text-center">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    <p class="text-justify text-center">Get Live Data and Latest News on COVID19 right here</p>
   </div>
 </div>
 
     <div class="con" style="margin-top:10px">  
       <div class="row d-flex justify-content-around">
         <div class="col-md-6 col-lg-4"> 
-          <div class="car" style="margin-top:10px">
+          <div class="car" style="margin-top:10px margin-bottom:500px">
             <div class="card-body">
               <h5 class="card-title" style="font-weight: bold;">Get Global Covid-19 Cases</h5>
               <p1 class="card-text">This Page Contains the total number of COVID19 cases from all over the world</p1><br>
@@ -114,9 +114,10 @@
     </main> 
 <!-- Footer -->
 <div class="bottom">
-<footer class="page-footer font-small teal pt-4" >
 
-  <!-- Footer Text -->
+<footer class="page-footer font-small blue pt-4">
+
+  <!-- Footer Links -->
   <div class="container-fluid text-center text-md-left">
 
     <!-- Grid row -->
@@ -126,10 +127,13 @@
       <div class="col-md-6 mt-md-0 mt-3">
 
         <!-- Content -->
-        <h5 class="text-uppercase font-weight-bold">Footer text 1</h5>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita sapiente sint, nulla, nihil
-          repudiandae commodi voluptatibus corrupti animi sequi aliquid magnam debitis, maxime quam recusandae
-          harum esse fugiat. Itaque, culpa?</p>
+        <h5 class="text-uppercase" align="text-center">Connect and Contribute</h5>
+        <p>This site contains all the crucial as well as latest information about the Corona Virus and its affect on the world.<br><br>
+
+        Just in case you wish to Contribute, Here is the Github Link.<br><br>
+
+        <a href="https://github.com/zaryab2000/trAck_COVID19_LiVe_dAta" class="btn btn-primary" style="background-color: black;">Contribute On Github</a>
+        </p>
 
       </div>
       <!-- Grid column -->
@@ -137,13 +141,28 @@
       <hr class="clearfix w-100 d-md-none pb-3">
 
       <!-- Grid column -->
-      <div class="col-md-6 mb-md-0 mb-3">
+      <div class="col-md-3 mb-md-0 mb-3">
 
-        <!-- Content -->
-        <h5 class="text-uppercase font-weight-bold">Footer text 2</h5>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio deserunt fuga perferendis modi earum
-          commodi aperiam temporibus quod nulla nesciunt aliquid debitis ullam omnis quos ipsam, aspernatur id
-          excepturi hic.</p>
+        <!-- Links -->
+        <h5 class="text-uppercase">Developer</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://github.com/zaryab2000/trAck_COVID19_LiVe_dAta" class="btn btn-primary" style="background-color: black;">Zaryab Afser</a>
+          </li>
+        </ul>
+
+      </div>
+      <div class="col-md-3 mb-md-0 mb-3">
+
+        <!-- Links -->
+        <h5 class="text-uppercase">UI/UX Designer</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://www.behance.net/tanyavijaykar1" class="btn btn-primary" style="background-color: black;">Tanya Vijayker</a>
+          </li>
+        </ul>
 
       </div>
       <!-- Grid column -->
@@ -152,14 +171,16 @@
     <!-- Grid row -->
 
   </div>
-  <!-- Footer Text -->
+  <!-- Footer Links -->
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+    <a href="http://covidtracker2000.pythonanywhere.com"> covidtracker2000.com</a>
   </div>
   <!-- Copyright -->
-</div >
+
+</footer>
+<!-- Footer -->
 </footer>
 <!-- Footer -->
     <!-- Optional JavaScript
