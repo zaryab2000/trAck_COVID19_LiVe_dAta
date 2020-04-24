@@ -6,11 +6,11 @@
 {% endblock scripts %}
 {% block content %}
 
-<div class="container">
+<div class="con col-md-12 offset-md-3 text-center">
   <h3>{{total}} Latest News On Covid-19 from All Over India</h3>
       {% for heads in page %}
 
-  <div class="container" style="text-align: center;">
+  <div class="con" style="text-align: center;">
 
       <div class="card text-center" style="margin-top: 1px">
           <div class="card-header">
@@ -19,7 +19,7 @@
           <div class="card-body">
             <h5 class="card-title">{{heads.0}}</h5>
             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="{{heads.1}}" class="btn btn-primary">Click Here To READ MORE</a>
+            <a href="{{heads.1}}" class="btn btn-primary" style="background-color: black;">Click Here To READ MORE</a>
           </div>
           <div class="card-footer text-muted">
 

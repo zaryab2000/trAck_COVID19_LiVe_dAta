@@ -1,10 +1,11 @@
 {% extends 'trackerApp/base_index.html' %}
 
 {% block content %}
-	
-<div class="container">
+  
+<div class="con col-md-12 offset-md-3 text-center">
   <h3>Top 10 MOST AFFECTED Countries all across the world </h3>
-	{% for d in data %}
+  {% for d in data %}
+  <div class="con">
 <table class="table table-hover table-dark">
   <thead>
     <tr>
@@ -27,9 +28,7 @@
 {% endfor %}
 
 </div>
-
-
-
+</div>
 
 
 {% endblock %}

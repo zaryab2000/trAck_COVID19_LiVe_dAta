@@ -1,6 +1,6 @@
 import requests,json
 from bs4 import BeautifulSoup
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.core.paginator import Paginator
 
 
@@ -36,24 +36,26 @@ def getCountryData(request):
 	countries_list=getCountries()
 
 	if request.method =='POST':
-		name = request.POST.get('country_name')
-		detail_url = f'https://covid19.mathdro.id/api/countries/{name}'
-		
-		country_detail = requests.get(detail_url)
-		detail_json=country_detail.json()
+		try:
 
-		confirmed = detail_json['confirmed']['value']
-		recover  =detail_json['recovered']['value']
-		deaths = detail_json['deaths']['value']
+			name = request.POST.get('country_name')
+			detail_url = f'https://covid19.mathdro.id/api/countries/{name}'
+			
+			country_detail = requests.get(detail_url)
+			detail_json=country_detail.json()
 
-		print(name)
+			confirmed = detail_json['confirmed']['value']
+			recover  =detail_json['recovered']['value']
+			deaths = detail_json['deaths']['value']
 
-		context = {
-		'confirmed':confirmed,
-		'recovered':recover,
-		'deaths':deaths,
-		'names':countries_list
-		}
+			context = {
+			'confirmed':confirmed,
+			'recovered':recover,
+			'deaths':deaths,
+			'names':countries_list
+			}
+		except:
+			return redirect('country_data')
 
 	else:
 		context = {
