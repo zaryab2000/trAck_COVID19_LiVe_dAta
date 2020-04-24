@@ -14,44 +14,43 @@
     <title>COVID-19 TRACKER</title>
   </head>
   <body >
+  <div class="back">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-inverse ">
+      <div class="container-fluid">
+      <a class="navbar-brand" href="#" style=" font-size: 30px">COviD-19 TRaCker </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
- <nav class="navbar navbar-expand-lg navbar-dark navbar-inverse">
-          <div class="container-fluid">  
-          <a class="navbar-brand" href="#" style=" font-size: 30px">BoB </a></div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto" style="font-size: 25px" style="font-weight: bold;">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'news' %}">Read Top Headlines on Covid-19</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Check Out More
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+               <a class="dropdown-item" href="{% url 'news' %}">Read Lates News</a>
+              <a class="dropdown-item" href="{% url 'top10' %}">See Top-10 Effected Country</a>
+              <a class="dropdown-item" href="{% url 'country_data' %}">Search For Country's Live Data</a>
+              <div class="dropdown-divider"></div>
+            </div>
+          </li>
+</ul>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Dropdown
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-              </li>
-            <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-   
-    </div>
-    <br>
-    
-    
- </div>
+</div>
+<br>
+</div>
 </nav>
+    
+
+    
+
 
 <div >
   <div class="container ">
@@ -60,45 +59,44 @@
   </div>
 </div>
 
-    <div class="container">  
-      <div class="row d-flex justify-content-between">
+    <div class="container" style="margin-top:10px">  
+      <div class="row d-flex justify-content-around">
         <div class="col-md-6 col-lg-4"> 
-          <div class="card">
-            <img class="card-img-top" src="{% static 'bl_linked.png' %}" alt="Card image cap">
-
+          <div class="card" style="margin-top:10px">
             <div class="card-body">
-              <h6 class="card-title">Card title</h6>
-              <p1 class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p1>
-              <a href="#" class="btn btn-primary">READ POSTS</a>
+              <h5 class="card-title" style="font-weight: bold;">Get Global Covid-19 Cases</h5>
+              <p1 class="card-text">This Page Contains the total number of COVID19 cases from all over the world</p1><br>
+              <a href="{% url 'data' %}" class="btn btn-primary">Get Live Data</a>
             </div>
           </div>
         </div>
   
         <div class="col-md-6 col-lg-4"> 
           <div class="card">
-            <img class="card-img-top" src="#" alt="Card image cap">
             <div class="card-body">
-              <h6 class="card-title">Card title</h6>
-              <p1 class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p1>
-              <a href="#" class="btn btn-primary">LOGIN</a>
+              <h5 class="card-title" style="font-weight: bold;">Latest News</h5>
+              <p1 class="card-text">Read the latest news in India on COVID-19</p1><br><br>
+              <a href="{% url 'news' %}" class="btn btn-primary">Read Now</a>
             </div>
           </div>
         </div>
       
+
+
+        <div class="col-md-6 col-lg-4"> 
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title" style="font-weight: bold;">Get Live Covid-19 Status</h5>
+              <p1 class="card-text">Get the live status on any country you want.</p1><br><br>
+              <a href="{% url 'country_data' %}" class="btn btn-primary">Search Out</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 </div>
 </div>
-<div class="buttons">
-  <h1>Simple hover effects with <code>box-shadow</code></h1>
-  <button class="fill">Fill In</button>
-  <button class="pulse">Pulse</button>
-  <button class="close">Close</button>
-  <button class="raise">Raise</button>
-  <button class="up">Fill Up</button>
-  <button class="slide">Slide</button>
-  <button class="offset">Offset</button>
-</div>
+
 <div class="row">
         <div class="col-md-8">
           {% if messages %}
@@ -116,7 +114,7 @@
     </main> 
 <!-- Footer -->
 <div class="bottom">
-<footer class="page-footer font-small teal pt-4" ">
+<footer class="page-footer font-small teal pt-4" >
 
   <!-- Footer Text -->
   <div class="container-fluid text-center text-md-left">

@@ -17,13 +17,14 @@
 		            label: '# of Total Confirmed Cases ',
 		            data: [confirmed,recovered,death],
 		            backgroundColor: [
-		                'rgba(255, 99, 132, 0.2)',
+		                'rgba(255, 99, 132, 0.5)',
 		                'rgba(54, 162, 235, 0.2)',
-		                'rgba(255, 206, 86, 0.2)',
+		                'rgba(255, 206, 86, 0.5)',
 		                'rgba(75, 192, 192, 0.2)',
 		                'rgba(153, 102, 255, 0.2)',
-		                'rgba(255, 159, 64, 0.2)'
+		                'rgba(255, 159, 64, 0.5)'
 		            ],
+		        
 		            borderColor: [
 		                'rgba(255, 99, 132, 1)',
 		                'rgba(54, 162, 235, 1)',
@@ -61,18 +62,21 @@
 <!-- OVERALL DATA -->
 <div class="con">
 		<h1 class="text-center align-top">COVID-19 DATA FROM ACROSS THE WORLD</h1></div>
+		<p style="margin-top:5px margin-bottom:10px">Metionted Below are the LIVE DATA, depicting the total number of cases from all over the world.</p>
 
-		<form class="form-inline d-flex justify-content-around centre">
-<a class="tag "><h3 class="mx-auto " style="width: 200px; text-align: centre;">CONFIRMED  - {{confirmed}}</h3></a>
-<a class="tag1"><h3 class="mx-auto" style="width: 200px;">RECOVERED - {{recovered}}</h3></a>
-<a class="tag2"><h3 class="mx-auto" style="width: 200px;">DEATHS -  {{deaths}}</h3></a>
-	</form>
+		<div class="form-inline d-flex justify-content-around centre">
+<a class="tag "><h3 class="mx-auto " style="width: 200px; margin-top: 20px">{{confirmed}} CONFIRMED CASES YET </h3></a>
+
+
+<a class="tag1"><h3 class="mx-auto" style="width: 200px; margin-top: 20px">{{recovered}} Patients Recovered from COVID-19 </h3></a>
+<a class="tag2"><h3 class="mx-auto" style="width: 200px; margin-top: 20px"> {{deaths}} Deaths Due To Covid19  </h3></a>
+	</div>
 
 </div></div></div>
 	<div class="containe col-md-12 offset-md-3 text-center" style="text-align: center;">
 		<h3>VISUALIZING THE STATS</h3>
 		<div class="block"   style="background-color: rgb(228, 228, 228);">
-		<canvas id="myChart" width="500" height="250" style="margin-right:200px; align-items: center;"></canvas></div>
+		<canvas id="myChart" width="500" height="500" style="margin-right:200px; align-items: center;"></canvas></div>
 	</div>
 
 

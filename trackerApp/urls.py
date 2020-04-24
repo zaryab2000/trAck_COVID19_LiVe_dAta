@@ -6,5 +6,5 @@ urlpatterns = [
     path('data/',views.data, name='data'),
     path('news/', views.getNews,name='news'),
     path('country_data/', views.getCountryData, name='country_data'),
-    path('top10/', views.topConfirm, name="top")
+    path('top10/', views.topConfirm, name="top10")
 ]

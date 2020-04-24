@@ -46,6 +46,23 @@
 		});
 });
 
+$(document.body).on('change',"#nameChange",function (e) {
+   var name= $("#nameChange option:selected").text();
+   display = `GET LIVE UPDATE ON ${name}`
+   heads = `Live Data on COVID19 from ${name}`
+   var butt = $('#live').text(display)
+   $("#heading").text(heads)
+
+});
+
+$(document.body).on('change',"#nameChange",function (e) {
+   var name= $("#nameChange option:selected").text();
+   display = `GET LIVE UPDATE ON ${name}`
+   var butt = $('#live').text(display)
+
+});
+
+
 </script>
 
 
@@ -55,30 +72,29 @@
 	<h1 class="col-md-12 offset-md-3 text-center">COVID-19 DATA FROM ACROSS THE WORLD</h1>
 	<div class="contain" style="text-align: center;">
 		<!-- SELECT BOX -->
+			<h3 class="col-md-12 offset-md-3 text-center">SELECT A COUNTRY</h3>
 		<form method="POST">
-			<h3 class="col-md-12 offset-md-3 text-center">SELECT COUNTRY</h3>
 			{%csrf_token%}
 		  <div class="form-group d-flex justify-content-center col-md-12 offset-md-2 text-center">
 		
-		    <select class=" opt form-control text-center align-middle col-md-12 offset-md-2  " id="exampleFormControlSelect1 " name="country_name">
-		    <option class="opt text-left align-middle ">SELECT A COUNTRY </option>
+		    <select required id="nameChange" class=" opt form-control text-center align-middle col-md-12 offset-md-2  " id="exampleFormControlSelect1 " name="country_name" >
+		    <option class="opt text-left align-middle ">Click here to Select a Country</option>
 		      {% for name in names %}
 		      <option >{{name}}</option>
 		      {% endfor %}
 		    </select>
 	
 		  </div>
-		  <button type="submit " class="btn btn-outline-primary col-md-12 offset-md-3 text-center">Get Updates</button>
+		  <button id="live" type="submit " class="btn btn-outline-primary col-md-12 offset-md-3 text-center" style="font-size: 30px">Get Updates</button>
 	</form>
-
 
 	<div class="contain" style="text-align: center;">
 		<!-- OVERALL DATA -->
 		<form class="form-inline d-flex justify-content-around centre col-md-12 offset-md-3 text-center">
 			<div class="line"></div>
-		<h3>CONFIRMED - {{confirmed}}</h3>
-		<h3>RECOVERED -{{recovered}}</h3>
-		<h3>DEATHS - {{deaths}}</h3></form>
+		<h3>CONFIRMED Cases- {{confirmed}}</h3>
+		<h3>RECOVERED Cases-{{recovered}}</h3>
+		<h3>DEATHS Cases-{{deaths}}</h3></form>
 	</div>
 
 	<div class="containe col-md-12 offset-md-3 text-center" width="500" height="250" style="margin-right:100px">

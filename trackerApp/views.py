@@ -1,6 +1,8 @@
 import requests,json
 from bs4 import BeautifulSoup
 from django.shortcuts import render
+from django.core.paginator import Paginator
+
 
 
 def index(request):
@@ -89,10 +91,11 @@ def topConfirm(request):
 
 	# ['US', 'Spain', 'Italy', 'France', 'Germany', 'United Kingdom', 'Turkey', 'Iran', 'China', 'Russia']
 	# [842629, 208389, 187327, 157135, 150648, 134638, 98674, 85996, 83876, 57999]
+	count = [1,2,3,4,5,6,7,8,9,10]
+	data =list(zip(count,countries,vals))
 
 	context={
-		'countries':countries,
-		'value':vals
+		'data':data,
 	}
 
 	return render(request, 'trackerApp/top10.html',context)
@@ -117,15 +120,18 @@ def getNews(request):
 		if 'COVID-19' or 'Coronavirus' or 'covid19' in news_list[index]:
 			heads.append(news_list[index])
 			source.append(links[index])
-	print(heads)
-	print(source)
 
 	data = list(zip(heads,source))
-	print(data)
+	total = len(data)
+	
+	paginator = Paginator(data,5)
+	page_number =  request.GET.get('page')
+	page_obj = paginator.get_page(page_number)
+
 	context={
-		'headlines':['a','b','c'],
-		'links':[1,2,3],
-		'data':data
+		'data':data,
+		'page':page_obj,
+		'total':total
 	}
 	return render(request, 'trackerApp/news.html',context)
 
