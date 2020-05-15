@@ -15,3 +15,10 @@ Covid19 Tracker, a website developed using Django(Python) Framework, is an appro
 
 #### Country Based Searching
 ![gif(2)](https://user-images.githubusercontent.com/42082608/82089000-618b2000-9710-11ea-9987-59b3aaf41f2a.gif)
+
+### APIs USED
+```
+COVID19 Live Date Api - https://covid19.mathdro.id/api/ 
+
+News Api - https://newsapi.org/v2/top-headlines?country 
+```
