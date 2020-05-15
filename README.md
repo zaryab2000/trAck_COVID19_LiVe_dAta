@@ -18,7 +18,7 @@ Covid19 Tracker, a website developed using Django(Python) Framework, is an appro
 
 ### APIs USED
 ```
-COVID19 Live Date Api - https://covid19.mathdro.id/api/ 
+##### COVID19 Live Date Api - https://covid19.mathdro.id/api/ 
 
-News Api - https://newsapi.org/v2/top-headlines?country 
+##### News Api - https://newsapi.org/v2/top-headlines?country 
 ```
