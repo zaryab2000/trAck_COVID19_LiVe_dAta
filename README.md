@@ -28,13 +28,13 @@ Visit the site at ![Covid19 Tracker](http://covid19tracker2020.pythonanywhere.co
 
 **Zaryab Afser**
 
-* [github/jonschlinkert](https://github.com/jonschlinkert)
-* [twitter/jonschlinkert](https://twitter.com/jonschlinkert)
+* [LinkedIn Profile](https://www.linkedin.com/in/zaryab-afser-97085b157/)
+* [Medium Profile](https://medium.com/@zaryabafser2000)
 
 ### License
 
 MIT License: http://adampritchard.mit-license.org/ or see [the `LICENSE` file](https://github.com/zaryab2000/trAck_COVID19_LiVe_dAta/blob/master/LICENSE).
 
-### Copyright © 2020, [Zaryab Afser](https://github.com/zaryab2000)
+#### Copyright © 2020, [Zaryab Afser](https://github.com/zaryab2000)
 
 
