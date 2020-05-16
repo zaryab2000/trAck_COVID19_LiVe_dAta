@@ -23,3 +23,8 @@ Visit the site at ![Covid19 Tracker](http://covid19tracker2020.pythonanywhere.co
 #### COVID19 Live Date Api - https://covid19.mathdro.id/api/ 
 
 #### News Api - https://newsapi.org/v2/top-headlines?country 
+
+## License
+
+
+MIT License: http://adampritchard.mit-license.org/ or see [the `LICENSE` file](https://github.com/zaryab2000/trAck_COVID19_LiVe_dAta/blob/master/LICENSE).
