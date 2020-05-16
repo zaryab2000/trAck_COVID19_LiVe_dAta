@@ -24,7 +24,17 @@ Visit the site at ![Covid19 Tracker](http://covid19tracker2020.pythonanywhere.co
 
 #### News Api - https://newsapi.org/v2/top-headlines?country 
 
-## License
+## Author
 
+**Zaryab Afser**
+
+* [github/jonschlinkert](https://github.com/jonschlinkert)
+* [twitter/jonschlinkert](https://twitter.com/jonschlinkert)
+
+### License
 
 MIT License: http://adampritchard.mit-license.org/ or see [the `LICENSE` file](https://github.com/zaryab2000/trAck_COVID19_LiVe_dAta/blob/master/LICENSE).
+
+### Copyright © 2020, [Zaryab Afser](https://github.com/zaryab2000)
+
+
